@@ -8,8 +8,10 @@
     --Orange: hsl(25, 97%, 53%);
     --White: hsl(0, 100%, 100%);
     --text-light-grey: hsl(217, 12%, 63%);
-    --main-dark-grey: hsl(213, 19%, 18%);
+    --main-dark-grey: rgb(37, 45, 55);
+
     --background-dark-Grey: hsl(216, 12%, 8%);
+    --border-radius:20px;
 }
 
 body {
@@ -17,9 +19,89 @@ body {
     font-family: "Overpass",sans-serif;
     font-size: 15px; /* paragraph */
     font-weight: 400;
-    color:var(--text-light-grey)
+    color:var(--text-light-grey);
+    display: flex;
+    flex-direction: column;
+    gap:20px;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
 }
 
+main {
+    background-color: rgba(37, 45, 55, 0.6);
+    min-width: 300px;
+    max-width: 420px;
+    border-radius: var(--border-radius);
+    padding:30px;
+}
+
+#rating-page {
+    display:flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap:20px;
+}
+
+#thanks-page {
+    display: none;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: 300px;
+
+}
+
+#thanks-page p {
+    text-align: center;
+}
+
+output {
+    font-weight: 700;
+    color:var(--Orange);
+    background-color: rgba(37, 45, 55, 0.8);
+    border-radius: var(--border-radius);
+    padding: 5px 20px;
+}
+
+#buttons {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    width:100%;
+    gap:20px;
+}
+
+#submit-button {
+    grid-column: 1 / -1;
+    grid-row: 2;
+    color: var(--background-dark-Grey);
+    background-color: var(--Orange);
+    border-radius: var(--border-radius);
+    border:none;
+    font-family: "Overpass",sans-serif;
+    font-weight: 700;
+}
+
+#icon-star, .notation {
+    background-color: rgba(37, 45, 55, 0.8);
+    border-radius: 50%;
+    padding: 10px;
+    height: 40px;
+    width: 40px;
+}
+
+h1 {
+    color: var(--White);
+}
+
+.notation {
+    color:var(--text-light-grey);
+    border:none;
+    font-family: "Overpass",sans-serif;
+    justify-self: center;
+    font-weight: 700;
+}
 
 .attribution {
     font-size: 11px;
@@ -28,4 +110,10 @@ body {
 }
 .attribution a {
     color: var(--text-light-grey);
+}
+
+button:hover, #submit-button:hover {
+    cursor: pointer;
+    background-color: var(--White);
+    color:var(--background-dark-Grey);
 }
