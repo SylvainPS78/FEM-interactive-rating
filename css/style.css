@@ -1,0 +1,31 @@
+*, *::after, *::before {
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+:root {
+    --Orange: hsl(25, 97%, 53%);
+    --White: hsl(0, 100%, 100%);
+    --text-light-grey: hsl(217, 12%, 63%);
+    --main-dark-grey: hsl(213, 19%, 18%);
+    --background-dark-Grey: hsl(216, 12%, 8%);
+}
+
+body {
+    background-color: var(--background-dark-Grey);
+    font-family: "Overpass",sans-serif;
+    font-size: 15px; /* paragraph */
+    font-weight: 400;
+    color:var(--text-light-grey)
+}
+
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+    color:var(--White);
+}
+.attribution a {
+    color: var(--text-light-grey);
+}
