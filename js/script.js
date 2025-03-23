@@ -25,7 +25,7 @@ notationButtons.forEach(button => {
 
 submitButton.addEventListener("click", (e)=>{
     handleSubmit(e);
-    if (rating === ""){return};
+    if (selectedRating === ""){return};
     ratingPage.style.display = "none";
     thanksPage.style.display = "flex";
 })
