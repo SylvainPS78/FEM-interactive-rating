@@ -9,30 +9,29 @@
     --White: hsl(0, 100%, 100%);
     --text-light-grey: hsl(217, 12%, 63%);
     --main-dark-grey: rgb(37, 45, 55);
-
     --background-dark-Grey: hsl(216, 12%, 8%);
     --border-radius:20px;
 }
 
 body {
     background-color: var(--background-dark-Grey);
-    font-family: "Overpass",sans-serif;
-    font-size: 15px; /* paragraph */
-    font-weight: 400;
     color:var(--text-light-grey);
     display: flex;
     flex-direction: column;
+    font-family: "Overpass",sans-serif;
+    font-size: 15px; /* paragraph */
+    font-weight: 400;
     gap:20px;
+    height: 100vh;
     justify-content: center;
     align-items: center;
-    height: 100vh;
 }
 
 main {
     background-color: rgba(37, 45, 55, 0.6);
-    min-width: 300px;
-    max-width: 420px;
     border-radius: var(--border-radius);
+    max-width: 420px;
+    min-width: 300px;
     padding:30px;
 }
 
@@ -44,19 +43,18 @@ main {
 }
 
 #thanks-page {
+    align-items: center;
     display: none;
     flex-direction: column;
     justify-content: space-around;
-    align-items: center;
     height: 300px;
-
 }
 
 #thanks-page p {
     text-align: center;
 }
 
-output {
+#rating-result {
     font-weight: 700;
     color:var(--Orange);
     background-color: rgba(37, 45, 55, 0.8);
@@ -89,6 +87,7 @@ output {
     padding: 10px;
     height: 40px;
     width: 40px;
+    transition : background-color 0.3s ease; 
 }
 
 h1 {
@@ -121,4 +120,17 @@ button:hover, #submit-button:hover {
 .selected {
     background-color: var(--Orange);
     color:var(--background-dark-Grey);
+}
+
+fieldset {
+    border:none;
+}
+
+form {
+    width:100%;
+}
+
+button:focus,
+#submit-button:focus{
+    outline : 2px solid var(--Orange);
 }

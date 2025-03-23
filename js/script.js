@@ -2,9 +2,9 @@ const notationButtons = document.querySelectorAll(".notation");
 const submitButton = document.getElementById("submit-button");
 const ratingPage = document.getElementById("rating-page");
 const thanksPage = document.getElementById("thanks-page");
-const output = document.querySelector("output");
+const resultOutput = document.getElementById("rating-result");
 
-let rating = "";
+let selectedRating = "";
 
 const handleSubmit = (e) => {
     e.preventDefault();
@@ -17,13 +17,14 @@ notationButtons.forEach(button => {
             button.classList.remove("selected");
         });
         button.classList.add("selected");
-        rating = button.value;
-        output.textContent = `You selected ${rating} out of 5`;
+        selectedRating = button.value;
+        resultOutput.textContent = `You selected ${selectedRating} out of 5`;
         console.log(rating);
     });
 });
 
-submitButton.addEventListener("click", ()=>{
+submitButton.addEventListener("click", (e)=>{
+    handleSubmit(e);
     if (rating === ""){return};
     ratingPage.style.display = "none";
     thanksPage.style.display = "flex";
