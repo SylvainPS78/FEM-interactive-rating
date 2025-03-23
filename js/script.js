@@ -19,7 +19,6 @@ notationButtons.forEach(button => {
         button.classList.add("selected");
         selectedRating = button.value;
         resultOutput.textContent = `You selected ${selectedRating} out of 5`;
-        console.log(rating);
     });
 });
 
