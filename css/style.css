@@ -117,3 +117,8 @@ button:hover, #submit-button:hover {
     background-color: var(--White);
     color:var(--background-dark-Grey);
 }
+
+.selected {
+    background-color: var(--Orange);
+    color:var(--background-dark-Grey);
+}
